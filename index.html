@@ -1,34 +1,70 @@
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=44218032" charset="UTF-8"></script>
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7192fa361f5cabb11d8a22de41c1ba8f";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
   
   <title>邹强的博客</title>
   <meta name="author" content="邹强">
-
   
   <meta name="description" content="这是一个高大上的地方，欢迎各位前来观光！">
   
   
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  
+  <meta property="og:site_name" content="邹强的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/imgs/favicon.ico" rel="icon" type="image/x-ico">
   <link rel="alternate" href="/atom.xml" title="邹强的博客" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
 </head>
 
+
 <body>
-  <header id="header" class="inner"><nav>
-  <ul>
-    
-      <li><a href="">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-</nav></header>
+  <header><div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/imgs/logo.png" alt="邹强的博客" title="邹强的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name">邹强的博客</h1>
+				<h2 class="blog-motto">新的开始</h2>
+			</div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li> <a href="/atom.xml">RSS</a> </li>
+				</ul>
+			</nav>			
+</div>
+</header>
   <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
   <article class="post">
   
     <div class="gallery">
@@ -43,45 +79,34 @@
   </div>
 </div>
   
-  <header>
-    
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-05-11T11:16:23.000Z"><a href="/2016/05/11/Hexo博客的搭建/">2016-05-11</a></time>
+      
+      
   
     <h1 class="title"><a href="/2016/05/11/Hexo博客的搭建/">Hexo博客的搭建</a></h1>
   
 
-    <time datetime="2016-05-11T11:16:23.000Z">
-  <span class="day">11</span><span class="month">May</span>
-</time>
-  </header>
-  <div class="entry-content">
-    
-      <p>友情链接：<a style="color:red" href="http://41152419901017.github.io/" target="_blank" rel="external">赵德状的博客</a> <a style="color:red" href="http://mogugit.github.io/" target="_blank" rel="external">孙帅兵的博客</a><br>大家一定在网上查过关于Hexo博客的搭建并部署到Github，网上写的千篇一律，今天来跟大家详细说一说，我搭建Hexo博客的过程！我决定写一篇“史上最详细“截图”搭建Hexo博客并部署到Github”。</p>
-<hr>
-<h3 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料:"></a>工具/原料:</h3><pre><code>*  Mac
-
-*  Hexo
-
-*  Github
-
-*  Node.js  
-</code></pre><h3 id="Node-js-的下载-安装"><a href="#Node-js-的下载-安装" class="headerlink" title="Node.js 的下载/安装"></a>Node.js 的下载/安装</h3><hr>
-<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>大家进入nodejs的官网进行下载。<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a><br>OSX系统下载左边的V4.4.4LTS稳定版，其他系统（例如：windows）点击下面的other Downloads进行选择下载！</p>
-<p><img src="http://o71je2o1g.bkt.clouddn.com/1E43AE11-4D52-4861-B0FD-4B115F3DC36F.png" alt=""></p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>下载后，进行安装，如图所示，一路确认就行了！</p>
-<p><img src="http://o71je2o1g.bkt.clouddn.com/0A20539C-DAEC-49DD-8B53-40D298EC1377.png" alt=""><br><br><br><br><br><br><br><br></p>
-<h3 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h3><hr>
-<p>安装Hexo之前，需要安装npm环境，npm官网：<a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a>。<br>1，打开终端<br><img src="http://o71je2o1g.bkt.clouddn.com/QQ20160512-0.png" alt=""><br><br><br><br><br>2，输入命令：<br>npm install -g hexo<br>注意：-g是指全局安装hexo<br><img src="http://o71je2o1g.bkt.clouddn.com/99F32EC8-3D6F-4D58-91E2-1B8665635DDA.png" alt=""><br><br><br><br><br>3，创建hexo文件夹</p>
-
-    
-    
-    <footer class="meta">
-      
-      
-      
+    </header>
+    <div class="entry">
+		 
+    </div>
+    <footer>
+		<div class="alignleft">
+		<a href="/2016/05/11/Hexo博客的搭建/#more" class="more-link">Read more</a>
+		</div>
+		
+		<div class="comments-count">
+			
+			<a href="/2016/05/11/Hexo博客的搭建/#comment" class="ds-thread-count icon-comment" data-thread-key="2016/05/11/Hexo博客的搭建/" data-count-type="comments"></a>
+			
+		</div>
+		
+        <div class="clearfix"></div>
     </footer>
-    
   </div>
-  
 </article>
 
   <article class="post">
@@ -98,30 +123,34 @@
   </div>
 </div>
   
-  <header>
-    
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-05-11T07:09:42.000Z"><a href="/2016/05/11/我的第二篇博客/">2016-05-11</a></time>
+      
+      
   
     <h1 class="title"><a href="/2016/05/11/我的第二篇博客/">技术分享</a></h1>
   
 
-    <time datetime="2016-05-11T07:09:42.000Z">
-  <span class="day">11</span><span class="month">May</span>
-</time>
-  </header>
-  <div class="entry-content">
-    
-      <p><img src="http://qq.cdn.lcsoul.cn/chrome-devtools-devtools-window.png" alt="Mou icon"><br>大概在1992年，一家称作Nombas的公司开始开发一种叫做C减减（C-minus-minus，简称 Cmm）的嵌入式脚本语言。这个脚本语言捆绑在一个叫做CEnvi的共享软件产品中，当Netscape Navigator崭露头角时，Nombas开发了一个可以嵌入网页中的CEnvi的版本。这些早期的试验称为EspressoPage（浓咖啡般的页面），它们代表了第一个在万维网上使用的客户端脚本语言。而Nombas丝毫没有料到它的理念将会成为因特网的一块重要基石。<br>  在这里只作简单介绍，在以后的例子中结程序再作具体解释其作用。<br>1、运算符<br>  运算符就是完成操作的一系列符号，它有七类：<br>  赋值运算符、算术运算符、比较运算符、逻辑运算符、条件运算、位操作运算符和字符串运算符。<br> 2、表达式<br>  运算符和操作数的组合称为表达式，通常分为四类：赋值表达式、算术表达式、布尔表达式和字符串表达式。<br> 3、语句<br>  Javascript程序是由若干语句组成的，语句是编写程序的指令。Javascript提供了完整的基本编程语句，它们是：<br>  赋值语句、switch选择语句、while循环语句、for循环语句、do while循环语句、break循环终止语句和continue循环中断语句。<br>4、函数<br>  函数是命名的语句段，这个语句段可以被当作一个整体来引用不着和执行。使用函数要注意以下几点：    1）函数由关键字function定义；<br>  2）函数必须先定义后使用，否则将出错；<br>  3）函数名是调用函数时引用的名称，它对大小写是敏感的，调用函数时不可写错函数名；<br>  4）参数是传递给函数使用或操作的值或对象，它可以是常量，也可以是变量，也可以是类的对象；<br>  5）return语句用于返回函数或表达式的值，当函数返回值类型不为空时，必须有，如果返回值类型为空，没有reurn项。<br>5、对象<br>  Javascript的一个重要功能就是基于对象的功能，通过基于对象的程序设计，可以用更直观、模块化和可重复使用的方式进行程序开发。    一组包含数据的属性和对属性中包含数据进行操作的方法，称为对象。比如要设定网页的背景颜色，所针对的对象就是document，所用的属性名是bgcolor，如document.bgcolor=”blue”，就是表示使背景的颜色为蓝色。<br>6、事件<br>   用户与网页交互时产生的操作，称为事件。绝大部分事件都是用户的动作所引发，如：用户按鼠标的按键，就产生onclick事件，若鼠标的指针在链接上移动，就产生onmouseover事件等等。在Javascript中，事件与事件处理程序配套使用。</p>
-
-    
-    
-    <footer class="meta">
-      
-      
-      
+    </header>
+    <div class="entry">
+		 
+    </div>
+    <footer>
+		<div class="alignleft">
+		<a href="/2016/05/11/我的第二篇博客/#more" class="more-link">Read more</a>
+		</div>
+		
+		<div class="comments-count">
+			
+			<a href="/2016/05/11/我的第二篇博客/#comment" class="ds-thread-count icon-comment" data-thread-key="2016/05/11/我的第二篇博客/" data-count-type="comments"></a>
+			
+		</div>
+		
+        <div class="clearfix"></div>
     </footer>
-    
   </div>
-  
 </article>
 
   <article class="post">
@@ -138,30 +167,34 @@
   </div>
 </div>
   
-  <header>
-    
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-05-11T06:46:54.000Z"><a href="/2016/05/11/我的第一篇博客/">2016-05-11</a></time>
+      
+      
   
     <h1 class="title"><a href="/2016/05/11/我的第一篇博客/">我的第一篇博客</a></h1>
   
 
-    <time datetime="2016-05-11T06:46:54.000Z">
-  <span class="day">11</span><span class="month">May</span>
-</time>
-  </header>
-  <div class="entry-content">
-    
-      <p>盼望着，盼望着，东风来了，春天的脚步近了。<br>　　一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水长起来了，太阳的脸红起来了。<br>　　小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的，草绵软软的。<br>　　桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味，闭了眼，树上仿佛已经满是桃儿、杏儿、梨儿！花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。<br>　　“吹面不寒杨柳风”，不错的，像母亲的手抚摸着你。风里带来些新翻的泥土的气息，混着青草味，还有各种花的香，都在微微润湿的空气里酝酿。鸟儿将窠巢安在繁花嫩叶当中，高兴起来了，呼朋引伴地卖弄清脆的喉咙，唱出宛转的曲子，与轻风流水应和着。牛背上牧童的短笛，这时候也成天在嘹亮地响。<br>　　雨是最寻常的，一下就是三两天。可别恼，看，像牛毛，像花针，像细丝，密密地斜织着，人家屋顶上全笼着一层薄烟。树叶子却绿得发亮，小草也青得逼你的眼。傍晚时候，上灯了，一点点黄晕的光，烘托出一片安静而和平的夜。乡下去，小路上，石桥边，撑起伞慢慢走着的人；还有地里工作的农夫，披着蓑，戴着笠的。他们的草屋，稀稀疏疏的在雨里静默着。<br>　　天上风筝渐渐多了，地上孩子也多了。城里乡下，家家户户，老老小小，他们也赶趟儿似的，一个个都出来了。舒活舒活筋骨，抖擞抖擞精神，各做各的一份事去。“一年之计在于春”；刚起头儿，有的是工夫，有的是希望。<br>　　春天像刚落地的娃娃，从头到脚都是新的，它生长着。<br>　　春天像小姑娘，花枝招展的，笑着，走着。<br>　　春天像健壮的青年，有铁一般的胳膊和腰脚，他领着我们上前去。</p>
-
-    
-    
-    <footer class="meta">
-      
-      
-      
+    </header>
+    <div class="entry">
+		 
+    </div>
+    <footer>
+		<div class="alignleft">
+		<a href="/2016/05/11/我的第一篇博客/#more" class="more-link">Read more</a>
+		</div>
+		
+		<div class="comments-count">
+			
+			<a href="/2016/05/11/我的第一篇博客/#comment" class="ds-thread-count icon-comment" data-thread-key="2016/05/11/我的第一篇博客/" data-count-type="comments"></a>
+			
+		</div>
+		
+        <div class="clearfix"></div>
     </footer>
-    
   </div>
-  
 </article>
 
   <article class="post">
@@ -178,63 +211,103 @@
   </div>
 </div>
   
-  <header>
-    
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-05-11T06:21:39.000Z"><a href="/2016/05/11/hello-world/">2016-05-11</a></time>
+      
+      
   
     <h1 class="title"><a href="/2016/05/11/hello-world/">Hello World</a></h1>
   
 
-    <time datetime="2016-05-11T06:21:39.000Z">
-  <span class="day">11</span><span class="month">May</span>
-</time>
-  </header>
-  <div class="entry-content">
-    
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-    
-    
-    <footer class="meta">
-      
-      
-      
+    </header>
+    <div class="entry">
+		 
+    </div>
+    <footer>
+		<div class="alignleft">
+		<a href="/2016/05/11/hello-world/#more" class="more-link">Read more</a>
+		</div>
+		
+		<div class="comments-count">
+			
+			<a href="/2016/05/11/hello-world/#comment" class="ds-thread-count icon-comment" data-thread-key="2016/05/11/hello-world/" data-count-type="comments"></a>
+			
+		</div>
+		
+        <div class="clearfix"></div>
     </footer>
-    
   </div>
-  
 </article>
 
 
-<nav id="pagenavi">
-  
-  
-  <div class="clearfix"></div>
-</nav></div>
-  <footer id="footer" class="inner"><div class="social alignright">
-  
-    <a class="facebook" href="http://www.facebook.com/true" title="Facebook">Facebook</a>
-  
-  
-  
-  
-  <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-<p>
+
   
-  &copy; 2016 邹强
+
   
-</p>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+
+  <iframe width="100%" height="140" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1923610190&verifier=6af5ad6a&colors=fafafa,fafafa,666666,0082cb,ecfbfd&dpc=1"></iframe>
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="http://opiece.me" title="Chillax's Blog" target="_blank">Chillax</a></li>
+</ul>
+</div>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi,I&#39;m the designer of this theme. <br/>
+			You can download this theme on my github.</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/1923610190" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/huangjunhui" target="_blank" title="github"></a>
+		
+		
+		<a href="https://www.facebook.com/huangjunhui" target="_blank" title="facebook"></a>
+		
+		
+		
+		<a href="mailto:jhhuang1993@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/huangjunhui/concise" target="_blank" title="Concise">Concise</a> © 2016 
+		
+		<a href="http://yoursite.com/about" target="_blank" title="邹强">邹强</a>
+		
+		</p>
+</div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
+<script src="/js/counter.js"></script>
 
 
 
@@ -247,12 +320,41 @@
 })(jQuery);
 </script>
 
-
-<div id="phasebeam">
-  <canvas></canvas>
-  <canvas></canvas>
-  <canvas></canvas>
+<div id="totop" style="position:fixed;bottom:100px;right:10px;cursor: pointer;">
+<a title="返回顶部"><img src="/imgs/scrollup.png"/></a>
 </div>
-<script src="/js/phasebeam.js"></script>
+<script src="/js/totop.js"></script>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </body>
 </html>
+
+
