@@ -89,7 +89,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-05-16T11:07:02.000Z" itemprop="datePublished">2016-05-16</time>
-    更新日期:<time datetime="2016-05-16T13:41:13.000Z" itemprop="dateModified">2016-05-16</time>
+    更新日期:<time datetime="2016-05-17T03:26:06.000Z" itemprop="dateModified">2016-05-17</time>
     
   </p>
 </header>
@@ -101,7 +101,13 @@
 <p>3，在项目根目录下创建一个名为<code>gulpfile.js</code>的文件，js文件里面的输入以下格式的代码：<br><img src="http://o71je2o1g.bkt.clouddn.com/gulp1.png" alt="">   </p>
 <p>4,运行gulp<br>在终端输入<code>gulp zq</code><br>这里名为<code>zq</code>的任务（task）将会被运行，输出的结果就是 “这是输出结果”<br>如果想同时执行多个任务，请输入<code>gulp task1 task2 task3 ...</code> .  </p>
 <h4 id="Gulp插件的安装"><a href="#Gulp插件的安装" class="headerlink" title="Gulp插件的安装"></a>Gulp插件的安装</h4><p>我们常用的插件：<br>推荐网址：<a href="http://gulpjs.com/plugins/" target="_blank" rel="external">http://gulpjs.com/plugins/</a></p>
-<p><code>npm install --save-dev gulp-ruby-sass</code> sass的编译<br><br><br><code>npm install --save-dev gulp-autoprefixer</code> 自动添加css前缀<br><br><br><code>npm install --save-dev gulp-minify</code> 压缩css<br><br><br><code>npm install --save-dev gulp-jshint</code> js代码校验<br><br><br><code>npm install --save-dev gulp-concat</code> 合并js文件<br><br><br><code>npm install --save-dev gulp-jsmin</code> 压缩js文件<br><br><br><code>npm install --save-dev gulp-imagemin</code> 压缩图片<br><br><br><code>npm install --save-dev gulp-livereload</code> 自动刷新页面<br><br><br><code>npm install --save-dev gulp-cache</code> 图片缓存，只有图片替换了才压缩<br><br><br><code>npm install --save-dev gulp-nitify</code> 更改提醒<br><br><br><code>npm install --save-dev gulp-del</code> 清除文件</p>
+<p><code>npm install --save-dev gulp-ruby-sass</code> sass的编译<br><br><br><code>npm install --save-dev gulp-autoprefixer</code> 自动添加css前缀<br><br><br><code>npm install --save-dev gulp-minify</code> 压缩css<br><br><br><code>npm install --save-dev gulp-jshint</code> js代码校验<br><br><br><code>npm install --save-dev gulp-concat</code> 合并js文件  </p>
+<pre><code>gulp.task(&apos;scriptsb&apos;, function() {
+    return gulp.src([&apos;lib/zq1.js&apos;,&apos;lib/zq2.js&apos;,&apos;lib/zq3.js&apos;])
+    .pipe(concat(&apos;allb.js&apos;))
+    .pipe(gulp.dest(&apos;./dist/&apos;))
+});                                            
+</code></pre><p><br><br><code>npm install --save-dev gulp-jsmin</code> 压缩js文件<br><br><br><code>npm install --save-dev gulp-imagemin</code> 压缩图片<br><br><br><code>npm install --save-dev gulp-livereload</code> 自动刷新页面<br><br><br><code>npm install --save-dev gulp-cache</code> 图片缓存，只有图片替换了才压缩<br><br><br><code>npm install --save-dev gulp-nitify</code> 更改提醒<br><br><br><code>npm install --save-dev gulp-del</code> 清除文件<br><br><br><code>npm install --save-dev gulp-jade</code> html/js转换   </p>
 
     </div>
     <footer>
