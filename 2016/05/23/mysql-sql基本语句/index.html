@@ -15,7 +15,7 @@
 	})();
 	</script>
   
-  <title>Gulp的安装 | 技术分享博客</title>
+  <title>mysql-sql基本语句 | 技术分享博客</title>
   <meta name="author" content="邹强">
   
   <meta name="description" content="这是一个高大上的地方，欢迎各位前来观光！">
@@ -23,7 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Gulp的安装"/>
+  <meta property="og:title" content="mysql-sql基本语句"/>
   <meta property="og:site_name" content="技术分享博客"/>
 
   
@@ -81,69 +81,60 @@
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	Gulp的安装
+	mysql-sql基本语句
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="邹强">邹强</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-05-16T11:07:02.000Z" itemprop="datePublished">2016-05-16</time>
-    更新日期:<time datetime="2016-07-02T06:19:55.000Z" itemprop="dateModified">2016-07-02</time>
+    <time datetime="2016-05-23T05:57:29.000Z" itemprop="datePublished">2016-05-23</time>
+    更新日期:<time datetime="2016-07-02T06:26:37.000Z" itemprop="dateModified">2016-07-02</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <p>Gulp基于Node.js的前端构建工具，通过Gulp的插件可以实现前端代码的编译（sass、less）、压缩、测试；图片的压缩；浏览器自动刷新，还有许多强大的插件可以在这里查找。  </p>
-<h4 id="Gulp的安装"><a href="#Gulp的安装" class="headerlink" title="Gulp的安装"></a>Gulp的安装</h4><p>Gulp中文网 ：<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">http://www.gulpjs.com.cn/</a><br>1,首先我们要全局安装一遍：<br>在终端输入<code>npm install --global gulp</code><br>我们在项目文件夹下面，再运行一遍<code>npm install gulp</code><br>然后输入<code>npm init</code> 初始化<br>当前文件夹下面会生成<code>package.json</code>文件</p>
-<p>2,作为项目的开发依赖（devDependencies）安装：<br>在终端输入<code>npm install --save-dev gulp</code><br>—save-dev这个属性会将条目保存到你package.json的devDependencies里面  </p>
-<p>3，在项目根目录下创建一个名为<code>gulpfile.js</code>的文件，js文件里面的输入以下格式的代码：<br><img src="http://o71je2o1g.bkt.clouddn.com/gulp1.png" alt="">   </p>
-<p>4,运行gulp<br>在终端输入<code>gulp zq</code><br>这里名为<code>zq</code>的任务（task）将会被运行，输出的结果就是 “这是输出结果”<br>如果想同时执行多个任务，请输入<code>gulp task1 task2 task3 ...</code> .  </p>
-<h4 id="Gulp插件的安装"><a href="#Gulp插件的安装" class="headerlink" title="Gulp插件的安装"></a>Gulp插件的安装</h4><p>我们常用的插件：<br>推荐网址：<a href="http://gulpjs.com/plugins/" target="_blank" rel="external">http://gulpjs.com/plugins/</a></p>
-<p><code>npm install --save-dev gulp-ruby-sass</code> sass的编译<br><br><br><code>npm install --save-dev gulp-autoprefixer</code> 自动添加css前缀<br><br><br><code>npm install --save-dev gulp-minify</code> 压缩css<br><br><br><code>npm install --save-dev gulp-jshint</code> js代码校验<br><br><br><code>npm install --save-dev gulp-concat</code> 合并js文件  </p>
-<pre><code>var concat = require(&apos;gulp-concat&apos;);
-gulp.task(&apos;scripts&apos;, function() {
-    return gulp.src(&apos;./lib/*.js&apos;)
-    .pipe(concat(&apos;all.js&apos;))
-    .pipe(gulp.dest(&apos;./dist/&apos;));
-    });
+        <p><code>1、说明：创建数据库</code><br>CREATE DATABASE database-name  </p>
+<hr>
+<p><code>2、说明：删除数据库</code><br>drop database dbname  </p>
+<hr>
+<p><code>3、说明：备份sql server</code><br>— 创建 备份数据的 device<br>USE master<br>EXEC sp_addumpdevice ‘disk’, ‘testBack’, ‘c:\mssql7backup\MyNwind_1.dat’<br>— 开始 备份<br>BACKUP DATABASE pubs TO testBack  </p>
+<hr>
+<p><code>4、说明：创建新表</code><br>create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)<br>根据已有的表创建新表：<br>A：create table tab_new like tab_old (使用旧表创建新表)<br>B：create table tab_new as select col1,col2… from tab_old definition only </p>
+<hr>
+<p><code>5、说明：删除新表</code><br>drop table tabname  </p>
+<hr>
+<p><code>6、说明：增加一个列</code><br>Alter table tabname add column col type<br>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。  </p>
+<hr>
+<p><code>7、说明：添加主键：</code> Alter table tabname add primary key(col)<br>说明：删除主键：Alter table tabname drop primary key(col)  </p>
+<hr>
+<p><code>8、说明：创建索引：</code>  create [unique] index idxname on tabname(col….)<br>删除索引：drop index idxname<br>注：索引是不可更改的，想更改必须删除重新建。  </p>
+<hr>
+<p><code>9、说明：创建视图：</code>create view viewname as select statement<br>删除视图：drop view viewname  </p>
+<hr>
+<p><code>10、说明：几个简单的基本的sql语句</code><br>选择：select * from table1 where 范围  </p>
+<p>插入：insert into table1(field1,field2) values(value1,value2)  </p>
+<p>删除：delete from table1 where 范围  </p>
+<p>更新：update table1 set field1=value1 where 范围  </p>
+<p>查找：select * from table1 where field1 like ’%value1%’ —like的语法很精妙，查资料!  </p>
+<p>排序：select * from table1 order by field1,field2 [desc]  </p>
+<p>总数：select count as totalcount from table1  </p>
+<p>求和：select sum(field1) as sumvalue from table1  </p>
+<p>平均：select avg(field1) as avgvalue from table1  </p>
+<p>最大：select max(field1) as maxvalue from table1  </p>
+<p>最小：select min(field1) as minvalue from table1  </p>
+<hr>
+<p><code>11、说明：几个高级查询运算词</code><br><strong>A： UNION 运算符</strong><br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。<br>当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。<br><strong>B： EXCEPT 运算符</strong><br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。<br>当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。<br><strong>C： INTERSECT 运算符</strong><br>INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。<br>注：使用运算词的几个查询结果行必须是一致的。  </p>
+<hr>
+<p><code>12、说明：使用外连接</code><br><strong>A、left （outer） join：</strong><br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。<br>SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c<br><strong>B：right （outer） join:</strong><br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。<br><strong>C：full/cross （outer） join：</strong><br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。  </p>
+<hr>
+<p><code>13、分组:Group by:</code><br>  一张表，一旦分组完成后，查询后只能得到组相关的信息。<br> 组相关的信息：（统计信息） count,sum,max,min,avg  分组的标准)<br>    在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br> 在selecte统计函数中的字段，不能和普通的字段放在一起；  </p>
+<hr>
+<p><code>14、对数据库进行操作：</code><br> 分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名  </p>
+<hr>
+<p><code>15.如何修改数据库的名称:</code><br>sp_renamedb ‘old_name’, ‘new_name’</p>
 
-gulp.task(&apos;scriptsb&apos;, function() {
-    return gulp.src([&apos;lib/zq1.js&apos;,&apos;lib/zq2.js&apos;,&apos;lib/zq3.js&apos;])
-    .pipe(concat(&apos;allb.js&apos;))
-    .pipe(gulp.dest(&apos;./dist/&apos;))
-});                                        
-</code></pre><p><br><br><code>npm install --save-dev gulp-jsmin</code> 压缩js文件<br><br><br><code>npm install --save-dev gulp-imagemin</code> 压缩图片  </p>
-<pre><code>var imagemin=require(&apos;gulp-imagemin&apos;)
-var rename = require(&apos;gulp-rename&apos;);
-gulp.task(&apos;imagemin&apos;,()=&gt;
-    gulp.src(&apos;lib/*&apos;)
-    .pipe(imagemin())
-    .pipe(rename({suffix: &apos;.min&apos;}))
-    .pipe(gulp.dest(&apos;./dist/images/&apos;))
-)
-</code></pre><p><br><br><code>npm install --save-dev gulp-livereload</code> 自动刷新页面<br><br><br><code>npm install --save-dev gulp-cache</code> 图片缓存，只有图片替换了才压缩<br><br><br><code>npm install --save-dev gulp-nitify</code> 更改提醒<br><br><br><code>npm install --save-dev gulp-del</code> 清除文件<br><br><br><code>npm install --save-dev gulp-jade</code> html/js转换  </p>
-<pre><code>var jade=require(&apos;gulp-jade&apos;)
-gulp.task(&apos;jade&apos;,function(){
-    gulp.src(&apos;html_project/view/html1.jade&apos;)
-    .pipe(jade())
-    .pipe(gulp.dest(&apos;html_project/desk/html/&apos;))
-    })   
-
-
-doctype
-html
-    head
-        meta(charset=&quot;UTF-8&quot;)
-        title Document
-        link(rel=&apos;stylesheet&apos;,href=&apos;../../src/css/css.css&apos;)
-    body
-        include header.jade
-        h2#hh.hh 我是h2标签
-        include footer.jade
-        div.yejiao 我是页脚
-</code></pre>
     </div>
     <footer>
         
@@ -193,10 +184,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2016/05/23/mysql-sql基本语句/" class="alignleft prev" title="mysql-sql基本语句">mysql-sql基本语句</a>
     
-    
-    <a href="/2016/05/11/Hexo博客的搭建/" class="alignright next" title="Hexo博客的搭建">Hexo博客的搭建</a>
+    <a href="/2016/05/16/Gulp的安装/" class="alignright next" title="Gulp的安装">Gulp的安装</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -206,7 +195,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2016/05/16/Gulp的安装/" data-title="Gulp的安装" data-url="http://yoursite.com/2016/05/16/Gulp的安装/"></div>
+		<div class="ds-thread" data-thread-key="2016/05/23/mysql-sql基本语句/" data-title="mysql-sql基本语句" data-url="http://yoursite.com/2016/05/23/mysql-sql基本语句/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
